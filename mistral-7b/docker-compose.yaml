@@ -1,0 +1,22 @@
+services:
+  mistral-api:
+    build: .
+    container_name: mistral-api
+    ports:
+      - "8000:8000"
+    environment:
+      - HUGGINGFACEHUB_API_TOKEN=${HUGGINGFACEHUB_API_TOKEN}
+    volumes:
+      - mistral_cache:/cache/huggingface
+      - ./.env:/app/.env
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  mistral_cache:
+    driver: local

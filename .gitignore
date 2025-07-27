@@ -1,0 +1,43 @@
+# Arquivos de ambiente
+.env
+.env.*
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+
+# MacOS
+.DS_Store
+
+# Linux
+*~
+
+# Diretórios de build
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+
+
+.terraform*
+*.tfstate
+id_rsa.pub
+id_rsa*
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+.env
+.venv/
+.cache/
+.cache/huggingface/
